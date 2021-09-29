@@ -18,8 +18,7 @@ CREATE TYPE upload_type AS ENUM (
     'Nft'
     );
 
--- Create upload table
-CREATE TABLE IF NOT EXISTS account
+CREATE TABLE IF NOT EXISTS public.user
 (
     id             BIGSERIAL PRIMARY KEY,
     magic_link_id  TEXT                                                          NOT NULL UNIQUE,
@@ -38,7 +37,7 @@ CREATE TABLE IF NOT EXISTS auth_key
     id          BIGSERIAL PRIMARY KEY,
     name        TEXT                                                          NOT NULL,
     secret      TEXT                                                          NOT NULL,
-    account_id  BIGINT                                                        NOT NULL REFERENCES account (id),
+    user_id     BIGINT                                                        NOT NULL REFERENCES public.user (id),
     inserted_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
     updated_at  TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL
 );
@@ -63,13 +62,12 @@ CREATE TABLE IF NOT EXISTS pin
     UNIQUE (content_cid, service)
 );
 
-
 -- removed_at and add the on conflict logic to the function, null or date depending on the situation
 -- check cid v1 or v0 logic 
 CREATE TABLE IF NOT EXISTS upload
 (
     id          BIGSERIAL PRIMARY KEY,
-    account_id  BIGINT                                                        NOT NULL REFERENCES account (id),
+    user_id     BIGINT                                                        NOT NULL REFERENCES public.user (id),
     key_id      BIGINT REFERENCES auth_key (id),
     content_cid TEXT                                                          NOT NULL REFERENCES content (cid),
     source_cid  TEXT                                                          NOT NULL,
@@ -83,5 +81,5 @@ CREATE TABLE IF NOT EXISTS upload
     inserted_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
     updated_at  TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now()) NOT NULL,
     --deleted_at TIMESTAMP WITH TIME ZONE DEFAULT timezone('utc'::text, now())
-    UNIQUE (account_id, content_cid)
+    UNIQUE (user_id, content_cid)
 );
