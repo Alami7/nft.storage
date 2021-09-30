@@ -21,6 +21,7 @@ import { login } from './routes/login.js'
 import { JSONResponse } from './utils/json-response.js'
 import { debug } from './utils/debug.js'
 import { getNFT } from './routes/get-nft.js'
+import { metrics as metricsV1 } from './routes-v1/metrics.js'
 import { tokensDeleteV1 } from './routes-v1/tokens-delete.js'
 import { tokensCreateV1 } from './routes-v1/tokens-create.js'
 import { tokensListV1 } from './routes-v1/tokens-list.js'
@@ -47,6 +48,7 @@ const r = new Router({
 
 // Monitoring
 r.add('get', '/metrics', metrics)
+r.add('get', '/v1/metrics', metricsV1)
 
 // CORS
 r.add('options', '*', cors)
