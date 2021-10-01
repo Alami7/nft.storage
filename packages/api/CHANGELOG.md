@@ -1,5 +1,28 @@
 # Changelog
 
+## [2.5.0](https://www.github.com/ipfs-shipyard/nft.storage/compare/api-v2.4.0...api-v2.5.0) (2021-10-01)
+
+
+### Features
+
+* **api:** deals and pin status ([#455](https://www.github.com/ipfs-shipyard/nft.storage/issues/455)) ([692d514](https://www.github.com/ipfs-shipyard/nft.storage/commit/692d5140ad323b27d431f59a189a3a6cfc56ba6c)), closes [#459](https://www.github.com/ipfs-shipyard/nft.storage/issues/459)
+* db migration pipeline ([#491](https://www.github.com/ipfs-shipyard/nft.storage/issues/491)) ([56b8697](https://www.github.com/ipfs-shipyard/nft.storage/commit/56b8697c65b9f86d1bc76b4e7c3001cffd36b87e))
+* migrate database to postgres  ([#263](https://www.github.com/ipfs-shipyard/nft.storage/issues/263)) ([ff0c919](https://www.github.com/ipfs-shipyard/nft.storage/commit/ff0c919ad63f8452357ff5f23b3f1ecd24880c86))
+
+
+### Bug Fixes
+
+* db config documentation and test fixes ([#471](https://www.github.com/ipfs-shipyard/nft.storage/issues/471)) ([a1911f3](https://www.github.com/ipfs-shipyard/nft.storage/commit/a1911f31f1079cf29f74192da4cebe576c069e77))
+* do not swallow error ([6733512](https://www.github.com/ipfs-shipyard/nft.storage/commit/673351273c99c4e8997a35573ed65ea9860ef8f7))
+* remove nft index cron job ([#453](https://www.github.com/ipfs-shipyard/nft.storage/issues/453)) ([a93433c](https://www.github.com/ipfs-shipyard/nft.storage/commit/a93433c56ba303e10b7c594d83b02c7c6af1a1ec))
+* remove usage_model from top level ([#463](https://www.github.com/ipfs-shipyard/nft.storage/issues/463)) ([9d9391d](https://www.github.com/ipfs-shipyard/nft.storage/commit/9d9391d1a9d9eded82bdd834e70bcfcce0024770))
+* use Authorization header ([79889fb](https://www.github.com/ipfs-shipyard/nft.storage/commit/79889fb2f69065e2645db99a8cbf999edd57454d))
+
+
+### Changes
+
+* setup countly analytics ([#432](https://www.github.com/ipfs-shipyard/nft.storage/issues/432)) ([8b90bfa](https://www.github.com/ipfs-shipyard/nft.storage/commit/8b90bfa4ba5b2a51c9f10b169e15fa217948faed))
+
 ## [2.4.0](https://www.github.com/ipfs-shipyard/nft.storage/compare/api-v2.3.1...api-v2.4.0) (2021-08-27)
 
 
