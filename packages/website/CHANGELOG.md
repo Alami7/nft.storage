@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.7.0](https://www.github.com/ipfs-shipyard/nft.storage/compare/website-v1.6.1...website-v1.7.0) (2021-10-01)
+
+
+### Features
+
+* add more questions to the FAQ ([#438](https://www.github.com/ipfs-shipyard/nft.storage/issues/438)) ([02ae154](https://www.github.com/ipfs-shipyard/nft.storage/commit/02ae154c4cf708f1f7c5ec51c1b4dfa3af59d236))
+* add navbar and fix mobile navigation ([#401](https://www.github.com/ipfs-shipyard/nft.storage/issues/401)) ([6049965](https://www.github.com/ipfs-shipyard/nft.storage/commit/60499653c4ebb4ad4590527243a09bc8bb73c540))
+* handle errors in the files page ([#433](https://www.github.com/ipfs-shipyard/nft.storage/issues/433)) ([182d484](https://www.github.com/ipfs-shipyard/nft.storage/commit/182d484f10d21c34248a5e7436f355fc6cce28cd))
+* migrate database to postgres  ([#263](https://www.github.com/ipfs-shipyard/nft.storage/issues/263)) ([ff0c919](https://www.github.com/ipfs-shipyard/nft.storage/commit/ff0c919ad63f8452357ff5f23b3f1ecd24880c86))
+
+
+### Bug Fixes
+
+* v1 callback login redirect ([#479](https://www.github.com/ipfs-shipyard/nft.storage/issues/479)) ([ebc6917](https://www.github.com/ipfs-shipyard/nft.storage/commit/ebc6917cd2980613dcadf8c81bd180e8f4d76b0a))
+
+
+### Changes
+
+* setup countly analytics ([#432](https://www.github.com/ipfs-shipyard/nft.storage/issues/432)) ([8b90bfa](https://www.github.com/ipfs-shipyard/nft.storage/commit/8b90bfa4ba5b2a51c9f10b169e15fa217948faed))
+* **website:** update nft.storage client dep ([bd6c37d](https://www.github.com/ipfs-shipyard/nft.storage/commit/bd6c37d815b2b9413b87eca2f801fd10d7fbc43c))
+
 ### [1.6.1](https://www.github.com/ipfs-shipyard/nft.storage/compare/website-v1.6.0...website-v1.6.1) (2021-09-13)
 
 
